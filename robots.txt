@@ -1,0 +1,11 @@
+# robots.txt для сайта nordparts182.ru
+# Управление сканированием для всех поисковых систем
+
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Allow: /
+
+# Указываем местоположение карты сайта
+Sitemap: https://nordparts182.ru/sitemap.xml
