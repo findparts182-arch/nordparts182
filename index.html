@@ -31,7 +31,67 @@
     --wa-green: #25D366;
 }
 
-/* ... остальной CSS без изменений ... */
+/* Базовые стили */
+body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:var(--bg-silver); color:var(--dark-gray); line-height:1.6; scroll-behavior:smooth; }
+a { text-decoration:none; color:inherit; cursor:pointer; }
+
+header { background: var(--dark-gray); color: white; padding: 20px 0; position: sticky; top:0; z-index:1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.nav-container { display:flex; justify-content:space-between; align-items:center; max-width:1200px; margin:0 auto; padding:0 20px; }
+.logo { font-family: 'Russo One', sans-serif; font-size:42px; color: var(--main-red); letter-spacing:4px; text-transform:uppercase; text-shadow: -2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff; }
+.contact-head { text-align:right; position:relative; }
+.contact-head small { display:block; margin-top:5px; }
+.copied-notice {
+    position:absolute; right:0; top:-25px; background:#333; color:#fff; padding:5px 10px; border-radius:5px; font-size:12px; display:none; z-index:1000;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(45deg, rgba(43,45,66,0.9), rgba(43,45,66,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=2000');
+    background-size:cover; background-position:center;
+    padding:100px 20px; color:white; text-align:center;
+}
+.hero h1 { font-size:42px; margin-bottom:20px; text-transform:uppercase; }
+.hero p { font-size:20px; max-width:800px; margin:0 auto; }
+.hero .highlight { font-weight:bold; margin:20px auto 30px; max-width:700px; text-align:center; }
+
+/* Кнопки */
+.cta-button { padding:15px 40px; border-radius:5px; font-size:18px; font-weight:bold; display:inline-block; transition:0.3s; border:none; cursor:pointer; color:white; }
+.cta-button:hover { transform:translateY(-3px); }
+.tg-btn { background: var(--tg-blue); } .tg-btn:hover { background:#0aa4f6; }
+.wa-btn { background: var(--wa-green); } .wa-btn:hover { background:#1ebe5a; }
+
+.section { max-width:1200px; margin:60px auto; padding:0 20px; }
+.section-title { text-align:center; font-size:32px; margin-bottom:10px; }
+.section-title::after { content:''; display:block; width:60px; height:4px; background: var(--main-red); margin:10px auto; }
+
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:30px; }
+.card { background:white; padding:30px; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.05); text-align:center; }
+.card h3 { color: var(--main-red); margin-top:0; }
+
+.parts-list { background: var(--dark-gray); color:white; padding:60px 20px; }
+.parts-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
+.part-item { border:1px solid #444; padding:12px; border-radius:4px; font-size:15px; }
+
+footer { background:#1a1a1a; color:#888; padding:60px 20px; text-align:center; border-top:3px solid var(--main-red); }
+
+/* Плавающие кнопки */
+.tg-float, .wa-float {
+    position:fixed; width:65px; height:65px; border-radius:50%; display:flex; justify-content:center; align-items:center;
+    box-shadow:0 4px 20px rgba(0,0,0,0.4); z-index:9999; cursor:pointer;
+}
+.tg-float { right:30px; bottom:30px; background-color: var(--tg-blue); } .tg-float:hover { background:#0aa4f6; }
+.wa-float { right:110px; bottom:30px; background-color: var(--wa-green); } .wa-float:hover { background:#1ebe5a; }
+.tg-icon, .wa-icon { width:35px; height:35px; fill:white; }
+
+/* Мобильная версия */
+@media (max-width:768px) {
+    .tg-float { bottom:90px; right:20px; }
+    .wa-float { bottom:20px; right:20px; }
+    .logo { font-size:28px; letter-spacing:2px; }
+    .nav-container { flex-direction:column; text-align:center; }
+    .contact-head { text-align:center; margin-top:15px; }
+    .hero { background: linear-gradient(45deg, rgba(43,45,66,0.9), rgba(43,45,66,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800'); }
+}
 </style>
 </head>
 <body>
