@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -8,14 +8,14 @@
 
 <!-- === Яндекс.Метрика === -->
 <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106577456', 'ym');
+(function(m,e,t,r,i,k,a){
+    m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+})(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106577456', 'ym');
 
-    ym(106577456, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+ym(106577456, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/106577456" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- === /Яндекс.Метрика === -->
@@ -25,14 +25,14 @@
     --main-red: #d90429;
     --dark-gray: #2b2d42;
     --light-gray: #8d99ae;
-    --bg-silver: #edf2f4;
+    --bg-silver: #3A3C57;
     --white: #ffffff;
     --tg-blue: #0088cc;
     --wa-green: #25D366;
 }
 
 /* Базовые стили */
-body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:var(--bg-silver); color:var(--dark-gray); line-height:1.6; scroll-behavior:smooth; }
+body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:var(--bg-silver); color:var(--white); line-height:1.6; scroll-behavior:smooth; }
 a { text-decoration:none; color:inherit; cursor:pointer; }
 
 header { background: var(--dark-gray); color: white; padding: 20px 0; position: sticky; top:0; z-index:1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
@@ -40,9 +40,6 @@ header { background: var(--dark-gray); color: white; padding: 20px 0; position: 
 .logo { font-family: 'Russo One', sans-serif; font-size:42px; color: var(--main-red); letter-spacing:4px; text-transform:uppercase; text-shadow: -2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff,2px 2px 0 #fff; }
 .contact-head { text-align:right; position:relative; }
 .contact-head small { display:block; margin-top:5px; }
-.copied-notice {
-    position:absolute; right:0; top:-25px; background:#333; color:#fff; padding:5px 10px; border-radius:5px; font-size:12px; display:none; z-index:1000;
-}
 
 /* Hero */
 .hero {
@@ -60,19 +57,21 @@ header { background: var(--dark-gray); color: white; padding: 20px 0; position: 
 .tg-btn { background: var(--tg-blue); } .tg-btn:hover { background:#0aa4f6; }
 .wa-btn { background: var(--wa-green); } .wa-btn:hover { background:#1ebe5a; }
 
-.section { max-width:1200px; margin:60px auto; padding:0 20px; }
-.section-title { text-align:center; font-size:32px; margin-bottom:10px; }
+/* Секции */
+.section { max-width:1200px; margin:60px auto; padding:0 20px; text-align:center; }
+.section-title { font-size:32px; margin-bottom:20px; }
 .section-title::after { content:''; display:block; width:60px; height:4px; background: var(--main-red); margin:10px auto; }
 
-.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:30px; }
-.card { background:white; padding:30px; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.05); text-align:center; }
-.card h3 { color: var(--main-red); margin-top:0; }
+/* Наши преимущества */
+.advantages { background:#2b2d42; padding:60px 20px; }
+.adv-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:30px; }
+.adv-card { border:2px solid #d90429; border-radius:8px; padding:30px; font-size:18px; text-align:center; }
+.adv-card h3 { font-size:22px; color:var(--main-red); margin-top:0; }
 
-.parts-list { background: var(--dark-gray); color:white; padding:60px 20px; }
-.parts-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
-.part-item { border:1px solid #444; padding:12px; border-radius:4px; font-size:15px; }
-
-footer { background:#1a1a1a; color:#888; padding:60px 20px; text-align:center; border-top:3px solid var(--main-red); }
+/* Всегда в наличии и под заказ */
+.parts-list { background:#3A3C57; color:white; padding:60px 20px; }
+.parts-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:15px; justify-items:center; }
+.part-item { border:2px solid #d90429; border-radius:8px; padding:20px; font-size:16px; text-align:center; background:#2b2d42; width:100%; box-sizing:border-box; }
 
 /* Плавающие кнопки */
 .tg-float, .wa-float {
@@ -90,7 +89,8 @@ footer { background:#1a1a1a; color:#888; padding:60px 20px; text-align:center; b
     .logo { font-size:28px; letter-spacing:2px; }
     .nav-container { flex-direction:column; text-align:center; }
     .contact-head { text-align:center; margin-top:15px; }
-    .hero { background: linear-gradient(45deg, rgba(43,45,66,0.9), rgba(43,45,66,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800'); }
+    .hero { padding:60px 20px; background: linear-gradient(45deg, rgba(43,45,66,0.9), rgba(43,45,66,0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=800'); }
+    .adv-grid, .parts-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -101,7 +101,6 @@ footer { background:#1a1a1a; color:#888; padding:60px 20px; text-align:center; b
         <div class="logo">NORDPARTS182</div>
         <div class="contact-head">
             <span id="phone-number">+7 (981) 801-00-86</span>
-            <div class="copied-notice" id="copied-notice">Скопировано!</div>
             <small><a href="https://yandex.ru/maps/org/86862882410/" target="_blank">Красное Село, Огородная 18</a></small>
         </div>
     </div>
@@ -116,37 +115,45 @@ footer { background:#1a1a1a; color:#888; padding:60px 20px; text-align:center; b
     <a href="https://wa.me/79818010086" class="cta-button wa-btn">Написать в WhatsApp</a>
 </section>
 
-<div class="section">
+<!-- Наши преимущества -->
+<div class="advantages section">
     <h2 class="section-title">Наши преимущества</h2>
-    <div class="grid">
-        <div class="card">
+    <div class="adv-grid">
+        <div class="adv-card">
             <h3>Экспертный подбор</h3>
             <p>Безошибочно подберем оригинал или проверенный аналог по VIN-коду вашего авто.</p>
         </div>
-        <div class="card">
+        <div class="adv-card">
             <h3>Оперативность</h3>
             <p>Быстрая доставка запчастей. Большинство деталей привозим в день обращения.</p>
         </div>
-        <div class="card">
+        <div class="adv-card">
             <h3>Любые марки</h3>
             <p>Обслуживаем 262 марки. В наличии лампы, масла и расходники для ТО.</p>
         </div>
     </div>
 </div>
 
-<div class="parts-list">
-    <div class="section">
-        <h2 class="section-title" style="color:white">Всегда в наличии и под заказ</h2>
-        <div class="parts-grid">
-            <div class="part-item">● Автомобильные лампы</div>
-            <div class="part-item">● Моторные масла и фильтры</div>
-            <div class="part-item">● Тормозные колодки и диски</div>
-            <div class="part-item">● Свечи зажигания и накаливания</div>
-            <div class="part-item">● Детали подвески и рулевого</div>
-            <div class="part-item">● Стеклоочистители</div>
-            <div class="part-item">● Трансмиссионные масла</div>
-            <div class="part-item">● Рем. комплекты выхлопной системы</div>
-        </div>
+<!-- Всегда в наличии и под заказ -->
+<div class="parts-list section">
+    <h2 class="section-title">Всегда в наличии и под заказ</h2>
+    <div class="parts-grid">
+        <div class="part-item">Моторные масла и фильтры</div>
+        <div class="part-item">Тормозные колодки и диски</div>
+        <div class="part-item">Ремонтные комплекты суппорта</div>
+        <div class="part-item">Свечи зажигания и накаливания</div>
+        <div class="part-item">Автомобильные лампы</div>
+        <div class="part-item">Стеклоочистители</div>
+        <div class="part-item">ГРМ, приводные ремни, ролики</div>
+        <div class="part-item">Трансмиссионные масла</div>
+        <div class="part-item">Радиаторы охлаждения</div>
+        <div class="part-item">Радиаторы кондиционера</div>
+        <div class="part-item">Элементы выхлопной системы</div>
+        <div class="part-item">Моторы и радиаторы отопления</div>
+        <div class="part-item">Ковры в салон полиуретан</div>
+        <div class="part-item">Поддоны в багажник полиуретан</div>
+        <div class="part-item">Брызговики полиуретан</div>
+        <div class="part-item">Локеры полиуретан</div>
     </div>
 </div>
 
@@ -171,11 +178,7 @@ footer { background:#1a1a1a; color:#888; padding:60px 20px; text-align:center; b
 
 <script>
 document.getElementById('phone-number').addEventListener('click', function(){
-    navigator.clipboard.writeText('+79818010086').then(function(){
-        const notice = document.getElementById('copied-notice');
-        notice.style.display = 'block';
-        setTimeout(() => { notice.style.display = 'none'; }, 1500);
-    });
+    navigator.clipboard.writeText('+79818010086');
 });
 </script>
 
